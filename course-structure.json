@@ -1,0 +1,116 @@
+{
+  "course": {
+    "name": "Gemini CLI for Everyone (GC4E): The Art of AI Leverage",
+    "version": "1.0",
+    "description": "Learn Gemini CLI through hands-on practice in a real scenario. Based on the original 'Claude Code for Everyone' by Carl Vellotti. Adapted and Optimized for Gemini CLI by Sujeong Lim.",
+    "scenario": "Basecamp Coffee - Turn around a struggling loyalty program",
+    "docs_url": "https://geminicli.com/docs"
+  },
+  "modules": [
+    {
+      "id": "module-1",
+      "name": "Foundations: Working WITH Files",
+      "description": "Master Gemini CLI's core features through the Basecamp Coffee scenario",
+      "lessons": [
+        {
+          "id": "1.1",
+          "name": "Introduction",
+          "description": "Welcome, course structure, and the Basecamp Coffee scenario",
+          "script": "lesson-modules/1.1-introduction/GEMINI.md",
+          "command": "/start-1-1"
+        },
+        {
+          "id": "1.2",
+          "name": "File Exploration & Visualization",
+          "description": "Explore files, set up Cursor, discover the mess you inherited",
+          "script": "lesson-modules/1.2-file-exploration/GEMINI.md",
+          "command": "/start-1-2"
+        },
+        {
+          "id": "1.3",
+          "name": "Working with Files",
+          "description": "@ mentions: single files, folders, templates, images, and web research",
+          "script": "lesson-modules/1.3-working-with-files/GEMINI.md",
+          "command": "/start-1-3"
+        },
+        {
+          "id": "1.4",
+          "name": "Commands & Navigation",
+          "description": "Slash commands, custom commands (TOML), approval modes, Chain-of-Thought, and /memory",
+          "script": "lesson-modules/1.4-commands-navigation/GEMINI.md",
+          "command": "/start-1-4"
+        },
+        {
+          "id": "1.5",
+          "name": "Agents",
+          "description": "Subagents for parallel processing and multi-file analysis",
+          "script": "lesson-modules/1.5-agents/GEMINI.md",
+          "command": "/start-1-5"
+        },
+        {
+          "id": "1.6",
+          "name": "Custom Sub-agents",
+          "description": "Create permanent team members with defined perspectives using .gemini/agents/",
+          "script": "lesson-modules/1.6-custom-sub-agents/GEMINI.md",
+          "command": "/start-1-6"
+        },
+        {
+          "id": "1.7",
+          "name": "GEMINI.md",
+          "description": "Persistent project memory with hierarchical GEMINI.md files and /memory command",
+          "script": "lesson-modules/1.7-gemini-md/GEMINI.md",
+          "command": "/start-1-7"
+        },
+        {
+          "id": "1.8",
+          "name": "Power Features Overview",
+          "description": "Module 1 recap, full toolkit table, and preview of advanced features",
+          "script": "lesson-modules/1.8-power-features/GEMINI.md",
+          "command": "/start-1-8"
+        }
+      ]
+    },
+    {
+      "id": "module-2",
+      "name": "Vibe Coding: Building FROM Scratch",
+      "description": "Build a real web app from requirements to deployment",
+      "lessons": [
+        {
+          "id": "2.1",
+          "name": "Setup",
+          "description": "Mindset shift (PM/engineer), the build loop, project folder setup",
+          "script": "lesson-modules/2.1-setup/GEMINI.md",
+          "command": "/start-2-1"
+        },
+        {
+          "id": "2.2",
+          "name": "Plan",
+          "description": "Define requirements: personality-coffee pairings, visual style, quiz questions",
+          "script": "lesson-modules/2.2-plan/GEMINI.md",
+          "command": "/start-2-2"
+        },
+        {
+          "id": "2.3",
+          "name": "Build & Iterate",
+          "description": "Scaffold Next.js, build the quiz, iterate with screenshots",
+          "script": "lesson-modules/2.3-build-iterate/GEMINI.md",
+          "command": "/start-2-3"
+        },
+        {
+          "id": "2.4",
+          "name": "GitHub",
+          "description": "Save code to the cloud with Git and GitHub CLI",
+          "script": "lesson-modules/2.4-github/GEMINI.md",
+          "command": "/start-2-4"
+        },
+        {
+          "id": "2.5",
+          "name": "Go Live",
+          "description": "Deploy to Vercel - your quiz goes live on the internet",
+          "script": "lesson-modules/2.5-go-live/GEMINI.md",
+          "command": "/start-2-5"
+        }
+      ]
+    }
+  ]
+}

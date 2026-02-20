@@ -1,0 +1,64 @@
+# 🛡️ Gemini CLI Policy Engine - Course Example
+# =============================================
+# This file shows how to control what Gemini CLI can do automatically.
+# Think of these as "house rules" for your AI assistant.
+#
+# Policy files go in: ~/.gemini/policies/
+# All .toml files in that folder are loaded automatically.
+#
+# Three possible decisions:
+#   allow    = do it automatically, no need to ask
+#   deny     = never do this, block it completely
+#   ask_user = always ask me first (the default behavior)
+#
+# Higher priority number = this rule wins over lower ones.
+# =============================================
+
+# ✅ ALLOW: Safe read-only commands - no need to ask every time
+[[rule]]
+toolName = "run_shell_command"
+commandPrefix = "git status"
+decision = "allow"
+priority = 100
+
+[[rule]]
+toolName = "run_shell_command"
+commandPrefix = "git log"
+decision = "allow"
+priority = 100
+
+[[rule]]
+toolName = "run_shell_command"
+commandPrefix = "ls"
+decision = "allow"
+priority = 100
+
+# ✅ ALLOW: Opening files for reading is always safe
+[[rule]]
+toolName = "read_file"
+decision = "allow"
+priority = 50
+
+# ❓ ASK: Always ask before running npm installs (can take long / use internet)
+[[rule]]
+toolName = "run_shell_command"
+commandPrefix = "npm install"
+decision = "ask_user"
+priority = 200
+
+# ❓ ASK: Always ask before git push (sends code to the internet)
+[[rule]]
+toolName = "run_shell_command"
+commandPrefix = "git push"
+decision = "ask_user"
+priority = 200
+
+# 🔴 NOTE: To DENY something completely, use decision = "deny"
+# Example (commented out - uncomment to activate):
+# [[rule]]
+# toolName = "run_shell_command"
+# commandPrefix = "rm -rf"
+# decision = "deny"
+# priority = 999
+
+# 📚 Learn more: https://geminicli.com/docs/reference/policy-engine
